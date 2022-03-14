@@ -5,7 +5,7 @@ import {prisonersListSelector} from "../store/prisoners/prisonersSelectors";
 import useDeviceSizes from "../hooks/useDeviceSizes";
 import debounce from 'lodash.debounce';
 import sprite from '../icons/icons.svg'
-import Modal from "../../../volonter/src/Components/modal/Modal";
+import Modal from "../Components/modal/Modal";
 import Loader from "../Components/loader/Loader";
 import {PrisonersPageStyled} from "./PrisonersPageStyled";
 
