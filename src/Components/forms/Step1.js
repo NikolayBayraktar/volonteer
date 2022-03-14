@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import Avatar from "../avatar/Avatar";
-import axios from "axios";
 import {Step1Styled} from "./Step1Styled";
 import {addTargetAction} from "../../store/find/findActions";
 import {useDispatch, useSelector} from "react-redux";

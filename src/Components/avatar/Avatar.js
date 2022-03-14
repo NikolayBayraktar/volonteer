@@ -2,7 +2,6 @@ import React from "react";
 import Modal from "../modal/Modal";
 import AvatarEditor from "./AvatarEditor";
 
-
 const Avatar = ({ setAvatarModuleOpen, setAvatar }) => {
     return (
         <Modal closeModal={setAvatarModuleOpen}>
