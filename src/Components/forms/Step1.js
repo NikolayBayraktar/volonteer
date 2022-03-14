@@ -52,7 +52,7 @@ const Step1 = ({setNumber}) => {
             желаемого результата в наших поисках. </p>
         <ul className='imagesList'>
             {target.images.map((item, idx) => <li className='imagesListItem' key={idx}>
-                <img className='imageListItemImage' src={item.img}/>
+                <img className='imageListItemImage' src={item.img} alt='data'/>
             </li>)}
         </ul>
         <button type='button' onClick={toggleModal} className='step1AddImageButton'>Добавить фото</button>

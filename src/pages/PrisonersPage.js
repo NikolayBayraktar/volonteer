@@ -1,9 +1,9 @@
-import {useEffect, useCallback, useState} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getPrisonersOperation} from "../store/prisoners/prisonersOperations";
 import {prisonersListSelector} from "../store/prisoners/prisonersSelectors";
 import useDeviceSizes from "../hooks/useDeviceSizes";
-import debounce from 'lodash.debounce';
+
 import sprite from '../icons/icons.svg'
 import Modal from "../Components/modal/Modal";
 import Loader from "../Components/loader/Loader";
@@ -25,10 +25,6 @@ const PrisonersPage = () => {
         setFilter(e.target.value);
     }
 
-    const debouncedChangeHandler = useCallback(
-        debounce(onHandleChange, 300)
-        , []);
-
     const getFilteredList = () => {
         return prisonersList.filter(prisoner => prisoner.name.toLowerCase().includes(filter.toLowerCase())
             || prisoner.base.includes(filter))
@@ -37,7 +33,7 @@ const PrisonersPage = () => {
     return (<PrisonersPageStyled isMobileDevice={isMobileDevice}>
         <label className='prisonersFilterLabel'>
             Поиск <span className='prisonersFilterLabelText'>( ФИО или номер части )</span>
-            <input type='text' onChange={debouncedChangeHandler} className='prisonersFilterInput'/>
+            <input type='text' onChange={onHandleChange} className='prisonersFilterInput'/>
         </label>
         <div className='prisonersTable'>
             <ul className='prisonersBody'>

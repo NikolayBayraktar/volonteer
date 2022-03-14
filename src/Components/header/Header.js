@@ -11,8 +11,6 @@ import Sidebar from "../sideBar/SideBar";
 const Header = () => {
     const { isMobileDevice } = useDeviceSizes();
     const [isSideBarOpen, setSideBarOpen] = useState(false);
-    const { setTheme } = useContext(ThemeContext);
-
     const toggleSidebar = () => {
         setSideBarOpen((prev) => !prev);
     };
