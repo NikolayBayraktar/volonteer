@@ -1,4 +1,4 @@
-import React, {createContext, useEffect} from "react";
+import React, {createContext} from "react";
 import Header from "./header/Header";
 import Main from "./main/Main";
 import useTheme from "../hooks/usePersistedTheme";

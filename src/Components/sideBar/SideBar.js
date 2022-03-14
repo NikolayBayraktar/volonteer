@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
 import { CSSTransition } from "react-transition-group";
 import { SideBarContainer } from "./SideBarStyled";
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 
-const Sidebar = ({ children, isSideBarOpen, toggleSidebar }) => {
+const Sidebar = ({ children, isSideBarOpen }) => {
   return (
     <SideBarContainer>
       <CSSTransition

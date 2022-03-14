@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {Step2Styled} from "./Step2Styled";
 import {useDispatch, useSelector} from "react-redux";
 import {addParentAction} from "../../store/find/findActions";
-import {addTargetOperation} from "../../store/find/findOperations";
 
 const initiatorState = {
     name: '',
@@ -30,7 +29,7 @@ const Step2 = ({setNumber}) => {
 
     useEffect(()=>{
         setParent(prev=>({...prev, ...parentDataFromState}))
-    }, []);
+    }, [parentDataFromState]);
 
     return (
         <Step2Styled>

@@ -27,8 +27,8 @@ const Step1 = ({setNumber}) => {
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        setTarget(prev=>({...prev, ...targetDataFromState}))
-    }, []);
+        setTarget(prev => ({...prev, ...targetDataFromState}))
+    }, [targetDataFromState]);
 
     const onHandleChange = (e) => {
         const {name, value} = e.target;

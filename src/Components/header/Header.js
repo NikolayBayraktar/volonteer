@@ -11,7 +11,7 @@ import Sidebar from "../sideBar/SideBar";
 const Header = () => {
     const { isMobileDevice } = useDeviceSizes();
     const [isSideBarOpen, setSideBarOpen] = useState(false);
-    const { theme, setTheme } = useContext(ThemeContext);
+    const { setTheme } = useContext(ThemeContext);
 
     const toggleSidebar = () => {
         setSideBarOpen((prev) => !prev);
@@ -21,10 +21,6 @@ const Header = () => {
         const body = document.querySelector("body");
         body.style.overflow = isSideBarOpen ? "hidden" : "auto";
     }, [isSideBarOpen]);
-
-    const toggle = () => {
-        setTheme()
-    }
 
     return (
         <HeaderStyled>

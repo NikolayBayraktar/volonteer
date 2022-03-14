@@ -10,7 +10,7 @@ const Logo = () => {
     return (
         <StyledLogo>
             <Link to='/' className='statisticsLink'>
-                <img src={themeContext.theme.title === 'light' ? logo : darkLogo} alt='volunteer image' className='logo'/>
+                <img src={themeContext.theme.title === 'light' ? logo : darkLogo} alt='volunteers' className='logo'/>
             </Link>
         </StyledLogo>
     );

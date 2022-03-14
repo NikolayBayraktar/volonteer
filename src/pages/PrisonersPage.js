@@ -16,7 +16,7 @@ const PrisonersPage = () => {
     const [filter, setFilter] = useState('')
     useEffect(() => {
         !prisonersList.length && dispatch(getPrisonersOperation())
-    }, [])
+    }, [dispatch, prisonersList.length])
 
     const prepareBirthDate = (date) => {
         return date ? date.split('-').reverse().join('.') : 'Информация уточняется'
@@ -91,7 +91,7 @@ const PrisonersPage = () => {
                                     <use href={sprite + '#icon-film'}/>
                                 </svg>
                             </div>
-                            <a href={prisoner.link} target='_blank' className='prisonerLink'>Ссылка на телеграмм</a>
+                            <a href={prisoner.link} rel="noreferrer" target='_blank' className='prisonerLink'>Ссылка на телеграмм</a>
                         </div>}
 
                     </div>

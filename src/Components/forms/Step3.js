@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {Step3Styled} from "./Step3Styled";
 import {useDispatch} from "react-redux";
 import {addTargetOperation} from "../../store/find/findOperations";
