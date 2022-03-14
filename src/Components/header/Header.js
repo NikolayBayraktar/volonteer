@@ -1,8 +1,8 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import Logo from "./logo/Logo";
 import Navigation from "./navigation/Navigation";
 import {HeaderStyled} from "./HeaderStyled";
-import {ThemeContext} from "../App";
+
 import useDeviceSizes from "../../hooks/useDeviceSizes";
 import Burger from "../burger/Burger";
 import Sidebar from "../sideBar/SideBar";
