@@ -91,7 +91,7 @@ const PrisonersPage = () => {
                         </div>}
 
                     </div>
-                </li>) : getFilteredList().length === 0 ? <p>Совпадения отсутствуют</p> :<Modal><Loader/></Modal> }
+                </li>) : <Modal><Loader/></Modal> }
             </ul>
         </div>
     </PrisonersPageStyled>)
