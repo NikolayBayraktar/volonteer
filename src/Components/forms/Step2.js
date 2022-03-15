@@ -30,6 +30,7 @@ const Step2 = ({setNumber}) => {
     useEffect(() => {
         setParent(prev => ({...prev, ...parentDataFromState}))
     }, [parentDataFromState]);
+
     return (
         <Step2Styled>
             <h2 className='step2Title'>Шаг 2</h2>
