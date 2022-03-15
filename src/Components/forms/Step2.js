@@ -14,7 +14,7 @@ const initiatorState = {
 const Step2 = ({setNumber}) => {
     const [parent, setParent] = useState(initiatorState);
     const dispatch = useDispatch()
-    const parentDataFromState = useSelector(state=>state.find.parent);
+    const parentDataFromState = useSelector(state => state.find.parent);
 
     const onHandleChange = (e) => {
         const {name, value} = e.target;
@@ -27,25 +27,25 @@ const Step2 = ({setNumber}) => {
         setNumber(3)
     }
 
-    useEffect(()=>{
-        setParent(prev=>({...prev, ...parentDataFromState}))
+    useEffect(() => {
+        setParent(prev => ({...prev, ...parentDataFromState}))
     }, [parentDataFromState]);
 
     return (
         <Step2Styled>
             <h2 className='step2Title'>Шаг 2</h2>
-            <p className='step2Instruction'>Для того, чтобы мы могли с Вами связаться мы просим внести контактные данные. Эти поля не обязательны и
-                Вы сами решаете, какую информацию указать. Мы рекомендуем заполнить все поля так как это сократит время
-                для осуществления поиска. Кроме того эта информация позволит нам быстро и эфективно с Вами связаться.
-                Это важно, так как к нам обращается много людей и не всегда есть возможность дать информацию по
-                телефону или на почтовый ящик.</p>
+            <p className='step2Instruction'>Для того чтобы мы могли с Вами связаться мы просим внести контактные данные.
+                Эти поля не обязательны и Вы сами решаете, какую информацию указать. Мы рекомендуем заполнить все поля
+                так как это сократит время для осуществления поиска. Кроме того эта информация позволит нам быстро и
+                эффективно с Вами связаться. Это важно, так как к нам обращается много людей и не всегда есть
+                возможность дать информацию по телефону или на почтовый ящик.</p>
             <form onSubmit={onHandleSubmit} className='step2FormStyled'>
                 <label className='step2FormLabel'>
                     Фамилия имя отчество
                     <input type='text' name='name' value={parent.name} onChange={onHandleChange}/>
                 </label>
                 <label className='step2FormLabel'>
-                   Степень родства (мать, отец, брат ...)
+                    Степень родства (мать, отец, брат ...)
                     <input type='text' name='relations' value={parent.relations} onChange={onHandleChange}/>
                 </label>
                 <label className='step2FormLabel'>
@@ -63,7 +63,7 @@ const Step2 = ({setNumber}) => {
                 <div className='step2buttonsOptions'>
                     <button
                         type='button'
-                        onClick={()=>setNumber(1)}
+                        onClick={() => setNumber(1)}
                         className='step2PrevButton'>
                         Назад
                     </button>

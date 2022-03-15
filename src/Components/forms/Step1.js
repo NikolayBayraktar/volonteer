@@ -23,10 +23,10 @@ const targetState = {
 const Step1 = ({setNumber}) => {
     const [target, setTarget] = useState(targetState);
     const [isOpen, setIsOpen] = useState(false);
-    const targetDataFromState = useSelector(state=>state.find.target)
+    const targetDataFromState = useSelector(state => state.find.target)
     const dispatch = useDispatch()
 
-    useEffect(()=>{
+    useEffect(() => {
         setTarget(prev => ({...prev, ...targetDataFromState}))
     }, [targetDataFromState]);
 
@@ -44,12 +44,9 @@ const Step1 = ({setNumber}) => {
     return (<Step1Styled>
         <h2 className='step1Title'>Шаг 1</h2>
         <p className='step1Instruction'>На этом шаге мы рекомендуем Вам указать максимально полную информацию о
-            человеке, которого Вы ищете. Это
-            даст нам возможность зачительно сократить время на поиск и уточнение информации. Поверьте, это не так
-            просто
-            как кажется. Любая деталь, любая мелочь, любая, даже не существенная по вашему мнению информация,
-            может нам помочь достичь
-            желаемого результата в наших поисках. </p>
+            человеке, которого Вы ищете. Это даст нам возможность значительно сократить время на поиск и уточнение
+            информации. Поверьте, это не так просто как кажется. Любая деталь, любая мелочь, любая, даже не существенная
+            по вашему мнению информация, может нам помочь достичь желаемого результата в наших поисках. </p>
         <ul className='imagesList'>
             {target.images.map((item, idx) => <li className='imagesListItem' key={idx}>
                 <img className='imageListItemImage' src={item.img} alt='data'/>
