@@ -41,23 +41,28 @@ const Step2 = ({setNumber}) => {
             <form onSubmit={onHandleSubmit} className='step2FormStyled'>
                 <label className='step2FormLabel'>
                     Фамилия имя отчество
-                    <input type='text' name='name' value={parent.name} onChange={onHandleChange}/>
+                    <input type='text' name='name' value={parent.name} onChange={onHandleChange}
+                           placeholder='Луговая Нина Михайловна'/>
                 </label>
                 <label className='step2FormLabel'>
                     Степень родства (мать, отец, брат ...)
-                    <input type='text' name='relations' value={parent.relations} onChange={onHandleChange}/>
+                    <input type='text' name='relations' value={parent.relations} onChange={onHandleChange}
+                           placeholder='мама'/>
                 </label>
                 <label className='step2FormLabel'>
                     Телефон
-                    <input type='text' name='phone' value={parent.phone} onChange={onHandleChange}/>
+                    <input type='text' name='phone' value={parent.phone} onChange={onHandleChange}
+                           placeholder='8 xxx xxx-xx-xx'/>
                 </label>
                 <label className='step2FormLabel'>
                     Электронная почта
-                    <input type='text' name='email' value={parent.email} onChange={onHandleChange}/>
+                    <input type='email' name='email' value={parent.email} onChange={onHandleChange}
+                           placeholder='volunteer@mail.ru'/>
                 </label>
                 <label className='step2FormLabel'>
                     Место проживания (адрес)
-                    <input type='text' name='address' value={parent.address} onChange={onHandleChange}/>
+                    <input type='text' name='address' value={parent.address} onChange={onHandleChange}
+                           placeholder='117405, г. Москва, ул. Дорожная, 56'/>
                 </label>
                 <div className='step2buttonsOptions'>
                     <button
